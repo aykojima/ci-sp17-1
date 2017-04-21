@@ -1,4 +1,8 @@
-<?php //application/views/news/create.php ?>
+<?php //application/views/news/create.php 
+
+$this->load->view($this->config->item('theme') . 'header');
+
+?>
 
 <h2><?php echo $title; ?></h2>
 
@@ -16,3 +20,8 @@
 
 </form>
 
+<?php 
+
+$this->load->view($this->config->item('theme') . 'footer');
+
+?>

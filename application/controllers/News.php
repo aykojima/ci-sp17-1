@@ -29,9 +29,9 @@ class News extends CI_Controller {
 
                 $data['title'] = $data['news_item']['title'];
 
-                $this->load->view('templates/header', $data);
+                //$this->load->view('templates/header', $data);
                 $this->load->view('news/view', $data);
-                $this->load->view('templates/footer', $data);
+                //$this->load->view('templates/footer', $data);
         }//end of view method
     
     
@@ -47,18 +47,18 @@ class News extends CI_Controller {
 
         if ($this->form_validation->run() === FALSE)
         {//show form
-            $this->load->view('templates/header', $data);
+            //$this->load->view('templates/header', $data);
             $this->load->view('news/create', $data);
-            $this->load->view('templates/footer', $data);
+            //$this->load->view('templates/footer', $data);
 
         }
         else
         {
             $this->news_model->set_news();
             //$this->load->view('news/success');
-            $this->load->view('templates/header', $data);
+            //$this->load->view('templates/header', $data);
             $this->load->view('news/success', $data);
-            $this->load->view('templates/footer', $data);
+            //$this->load->view('templates/footer', $data);
         }
     }//end create method
 
